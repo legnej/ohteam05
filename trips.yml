@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trips
+  labels:
+    app: trips
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: trips
+  template:
+    metadata:
+      labels:
+        app: trips
+    spec:
+      containers:
+      - name: trips
+        image: registryhjd6641.azurecr.io/tripinsights/trips:1.0
+        ports:
+        - containerPort: 80
+        env:
+        - name: SQL_USER
+          value: "sqladminhJd6641"
+        - name: SQL_PASSWORD
+          value: "sqlpassw0rd123!"
+        - name: SQL_SERVER
+          value: "sqlserverhjd6641.database.windows.net"
+        - name: SQL_DBNAME
+          value: "mydrivingDB"
