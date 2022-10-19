@@ -4,6 +4,7 @@ metadata:
   name: tripviewer
   labels:
     app: tripviewer
+  namespace: web-dev
 
 spec:
   replicas: 3
@@ -22,6 +23,6 @@ spec:
         - containerPort: 80
         env:
         - name: USERPROFILE_API_ENDPOINT
-          value: "http://userprofile:8080"
+          value: "http://userprofile.api-dev.svc.cluster.local:8080"
         - name: TRIPS_API_ENDPOINT
-          value: "http://trips:80"
+          value: "http://trips.api-dev.svc.cluster.local:80"
