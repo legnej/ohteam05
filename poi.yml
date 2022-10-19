@@ -4,6 +4,7 @@ metadata:
   name: poi
   labels:
     app: poi
+  namespace: api-dev
 
 spec:
   replicas: 3

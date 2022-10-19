@@ -4,6 +4,7 @@ metadata:
   name: tripviewer
   labels:
     app: tripviewer
+  namespace: web-dev
 
 spec:
   replicas: 3
