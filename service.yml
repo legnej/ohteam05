@@ -4,6 +4,7 @@ metadata:
   name: trips
   labels:
     app: trips
+  namespace: api-dev
 spec:
   selector:
     app: trips
@@ -18,6 +19,7 @@ metadata:
   name: userprofile
   labels:
     app: userprofile
+  namespace: api-dev
 spec:
   selector:
     app: userprofile

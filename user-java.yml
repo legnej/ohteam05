@@ -4,7 +4,8 @@ metadata:
   name: user-java
   labels:
     app: user-java
-
+  namespace: api-dev
+  
 spec:
   replicas: 3
   selector:
